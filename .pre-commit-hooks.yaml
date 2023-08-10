@@ -1,0 +1,8 @@
+- id: pre-commit-runner
+  name: execute pre-commit-config in subdir
+  description: execute pre-commit-config in subdir
+  entry: pre-commit-runner
+  language: python
+  language_version: "3.10"
+  types:
+    - python
