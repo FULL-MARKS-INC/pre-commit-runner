@@ -14,6 +14,9 @@ def main():
         if (x := pathlib.Path(path)) and x.is_relative_to(project_root)
     ]
 
+    for file in files:
+        print(file)
+
     if files:
         target_pwd = repository_root / sys.argv[1]
         proc = subprocess.run(
