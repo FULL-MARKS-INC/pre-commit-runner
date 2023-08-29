@@ -19,7 +19,6 @@ def main():
         proc = subprocess.run(
             ["poetry", "run", "pre-commit", "run", "--files", *[str(p) for p in files]],
             cwd=str(target_pwd),
-            shell=True
         )
         exit(proc.returncode)
     else:
