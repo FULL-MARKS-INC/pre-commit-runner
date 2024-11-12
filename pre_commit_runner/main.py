@@ -7,8 +7,9 @@ import sys
 def main():
     repository_root = pathlib.Path(os.getcwd())
     print(f"カレントディレクトリは{repository_root}です")
-    exit(1)
     project_root = pathlib.Path(sys.argv[1])
+    print(f"プロジェクトルートは{project_root}です")
+    exit(1)
     # 相対パスの付け替え
     files = [
         x.relative_to(project_root)
