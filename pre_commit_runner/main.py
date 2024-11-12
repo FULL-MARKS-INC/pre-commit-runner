@@ -7,6 +7,9 @@ import sys
 def main():
     repository_root = pathlib.Path(os.getcwd())
     project_root = pathlib.Path(sys.argv[1])
+    print(repository_root)
+    print(project_root)
+    exit(1)
     # 相対パスの付け替え
     files = [
         x.relative_to(project_root)
