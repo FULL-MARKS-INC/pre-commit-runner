@@ -23,7 +23,6 @@ def main():
             ["poetry", "run", "pre-commit", "run", "--files", *[str(p) for p in files]],
             cwd=str(target_pwd),
         )
-        print(["poetry", "run", "pre-commit", "run", "--files", *[str(p) for p in files]], "\n--------")
         exit(proc.returncode)
     else:
         exit(0)
