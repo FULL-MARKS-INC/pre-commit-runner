@@ -6,6 +6,8 @@ import sys
 
 def main():
     repository_root = pathlib.Path(os.getcwd())
+    print(f"カレントディレクトリは{repository_root}です")
+    exit(1)
     project_root = pathlib.Path(sys.argv[1])
     # 相対パスの付け替え
     files = [
@@ -23,7 +25,6 @@ def main():
         )
         print(["poetry", "run", "pre-commit", "run", "--files", *[str(p) for p in files]], "\n--------")
         exit(proc.returncode)
-        exit(1)
     else:
         exit(0)
 
